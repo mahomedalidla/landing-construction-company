@@ -112,6 +112,38 @@
 }
 
 
+.bloqueo-escritorio {
+  display: none;
+}
+
+@media screen and (min-width: 530px) {
+  .bloqueo-escritorio {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    inset: 0;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  body > *:not(.bloqueo-escritorio) {
+    display: none !important;
+  }
+
+  .signature-blk{
+    color: #e8e8e8;
+    text-decoration: none;
+  }
+}
+
+
+
 
 body{
   background-image: url("assets/texture-concret.png");
@@ -132,7 +164,7 @@ nav {
 }
 
 .img-nav {
-  width: 20%;
+  width: 50px;
 }
 
 main {
@@ -193,7 +225,6 @@ main {
   padding: 10px;
   font-family: "IBM Plex Mono", monospace;
   /* background-color: #e8e8e8; */
-  max-width: 300px;
 }
 
 .box::before,
@@ -228,4 +259,9 @@ footer{
   margin: 10% 0px;
   display: flex;
   justify-content: center;
+}
+
+.signature {
+  text-decoration: none;
+  color: #000;
 }
